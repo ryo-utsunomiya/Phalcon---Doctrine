@@ -20,7 +20,7 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
     rpm -ivh http://rpms.famillecollet.com/enterprise/remi-release-6.rpm
     # install packages
     yum -y install gcc make git
-    yum -y install php-devel pcre-devel php-mysql --enablerepo=remi-php55
+    yum -y install php php-devel pcre-devel php-mysql httpd --enablerepo=remi-php55
     # build and install Phalcon
     cd /tmp
     git clone --depth=1 git://github.com/phalcon/cphalcon.git
